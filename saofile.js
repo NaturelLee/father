@@ -49,7 +49,9 @@ module.exports = {
     },
     {
       type: 'move',
-      patterns: {},
+      patterns: {
+        gitignore: '.gitignore',
+      },
     },
   ],
   templateDir: process.env.useBFF === 'true' ? 'other' : 'lucy',
