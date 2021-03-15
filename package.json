@@ -1,6 +1,6 @@
 {
   "name": "@naturel/father",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "Father module uses lucy as submodule to install",
   "main": "index.js",
   "scripts": {

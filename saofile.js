@@ -56,7 +56,7 @@ module.exports = {
   ],
   templateDir: process.env.useBFF === 'true' ? 'other' : 'lucy',
   async completed() {
-    // this.gitInit();
+    this.gitInit();
     this.npmClient = 'npm';
     await this.npmInstall();
 
