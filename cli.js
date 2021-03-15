@@ -7,7 +7,7 @@ const { version } = require('./package.json');
 
 const generator = path.resolve(__dirname, '');
 
-const cli = cac('lucy');
+const cli = cac('father');
 
 cli
   .command(
