@@ -1,0 +1,31 @@
+# lockfiles
+package-lock.json
+
+# Directory for dist and release
+dist
+
+# Dependency directory
+# https://www.npmjs.org/doc/misc/npm-faq.html#should-i-check-my-node_modules-folder-into-git
+node_modules
+
+# IDE/Editor data
+.idea
+.vscode
+
+# macOS Serria finder data
+*.DS_Store
+
+# npmrc
+# .npmrc
+
+# debug components
+design
+
+# temporary directory
+build
+app/.tmp
+**/lib/**
+
+build-demo/sample
+
+app/mock/.mock
