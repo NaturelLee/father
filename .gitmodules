@@ -1,0 +1,3 @@
+[submodule "lucy"]
+	path = lucy
+	url = https://github.com/NaturelLee/lucy.git
