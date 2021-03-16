@@ -1,4 +1,11 @@
 const path = require('path');
+const fs = require('fs');
+
+const hasPkg = fs.existsSync(path.join(process.cwd(), 'package.json'));
+let packageInfo = {};
+if (hasPkg) {
+  packageInfo = require(path.join(process.cwd(), 'package.json'));
+}
 
 module.exports = {
   prompts() {
