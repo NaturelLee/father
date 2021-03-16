@@ -22,8 +22,8 @@ cli
   .option('--verbose', 'Show debug logs')
   .action((outDir = '.', cliOptions) => {
     console.log();
-    console.log(chalk`{cyan gza-cli v${version}}`);
-    console.log(chalk`✨  Generating godzilla application in {cyan ${outDir}}`);
+    console.log(chalk`{cyan father cli v${version}}`);
+    console.log(chalk`✨  Generating father application in {cyan ${outDir}}`);
 
     const { verbose, bff: useBFF } = cliOptions;
     const logLevel = verbose ? 4 : 2;

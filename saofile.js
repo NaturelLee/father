@@ -37,7 +37,7 @@ module.exports = {
     {
       type: 'move',
       patterns: {
-        gitignore: '.gitignore',
+        _gitignore: '.gitignore',
       },
     },
   ],
