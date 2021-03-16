@@ -30,8 +30,10 @@ module.exports = {
   actions: [
     {
       type: 'add',
-      files: '*',
-      filters: {},
+      files: '**',
+      filters: {
+        '.gitignore': false,
+      },
     },
     {
       type: 'modify',
@@ -47,9 +49,7 @@ module.exports = {
     },
     {
       type: 'move',
-      patterns: {
-        '.gitignore': '.gitignore',
-      },
+      patterns: {},
     },
   ],
   templateDir: './lucy',
