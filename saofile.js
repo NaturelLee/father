@@ -30,10 +30,8 @@ module.exports = {
   actions: [
     {
       type: 'add',
-      files: '**',
-      filters: {
-        'config/config.js': !hasPkg,
-      },
+      files: '*',
+      filters: {},
     },
     {
       type: 'modify',
@@ -50,11 +48,11 @@ module.exports = {
     {
       type: 'move',
       patterns: {
-        gitignore: '.gitignore',
+        '.gitignore': '.gitignore',
       },
     },
   ],
-  templateDir: process.env.useBFF === 'true' ? 'other' : 'lucy',
+  templateDir: './lucy',
   async completed() {
     this.gitInit();
     this.npmClient = 'npm';
