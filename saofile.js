@@ -1,11 +1,5 @@
 const path = require('path');
-const fs = require('fs');
 
-const hasPkg = fs.existsSync(path.join(process.cwd(), 'package.json'));
-let packageInfo = {};
-if (hasPkg) {
-  packageInfo = require(path.join(process.cwd(), 'package.json'));
-}
 module.exports = {
   prompts() {
     return [
@@ -30,29 +24,17 @@ module.exports = {
   actions: [
     {
       type: 'add',
+      // Copy and transform all files in `template` folder into output directory
       files: '**',
-      filters: {
-        '.gitignore': false,
-      },
-    },
-    {
-      type: 'modify',
-      files: 'package.json',
-      handler(data, filepath) {
-        if (hasPkg) {
-          packageInfo.name = data.name;
-          packageInfo.description = data.description;
-          packageInfo.version = data.version;
-        }
-        return data;
-      },
     },
     {
       type: 'move',
-      patterns: {},
+      patterns: {
+        gitignore: '.gitignore',
+      },
     },
   ],
-  templateDir: './lucy',
+  templateDir: 'lucy',
   async completed() {
     this.gitInit();
     this.npmClient = 'npm';
